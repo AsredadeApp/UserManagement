@@ -15,12 +15,11 @@ class CreateGroupTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('uid')->unsigned();
             $table->integer('subGid')->unsigned()->nullable();
             $table->string('name');
             $table->string('perCode');
             $table->timestamps();
-            $table->index(['id','uid','subGid']);
+            $table->index(['id','subGid']);
         });
     }
 

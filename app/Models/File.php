@@ -10,6 +10,6 @@ class File extends Model
 
     public function message()
     {
-        return $this->belongsTo('App\Models\Message');
+        return $this->belongsTo('App\Message');
     }
 }

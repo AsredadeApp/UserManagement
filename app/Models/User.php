@@ -20,7 +20,7 @@ class User extends Authenticatable
     public function groups()
     {
 
-        return $this->belongsTo('App\Model\Group');
+        return $this->belongsTo('App\Group');
     }
 
 }
