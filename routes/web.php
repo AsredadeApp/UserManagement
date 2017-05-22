@@ -1,5 +1,6 @@
 <?php
 
+use App\Group ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $usr = new App\User ;
+    $usr = $usr->find(1) ;
+    var_dump($usr->groups->toArray()) ;
 });
 
 Auth::routes();

@@ -13,23 +13,14 @@ class DatabaseSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        $limit = 33;
+        $limit = 5;
 
         for ($i = 0; $i < $limit; $i++) {
-            DB::table('users')->insert([ //,
-                'username' => $faker->userName,
+            DB::table('groups')->insert([
+                'subGid' => $i,
                 'name' => $faker->name,
-                'password' => $faker->md5,
-                'mobile' => $faker->phoneNumber,
-                'status' => 1,
-                'gid' => $i ,
-                'email'=>$faker->email,
-                'postalCode'=>$faker->postcode,
-                'tellNumber'=>$faker->phoneNumber,
-                'img'=>$faker->word,
-                'address'=>$faker->word
-
-            ]);
+                'perCode' => $faker->md5
+            ]) ;
         }
     }
 }

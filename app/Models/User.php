@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+//    use Notifiable;
 
     protected $fillable = [
         'name', 'email', 'password','mobile','status','postalCode','tellNumber','img','address'
@@ -19,8 +19,7 @@ class User extends Authenticatable
 
     public function groups()
     {
-
-        return $this->belongsTo('App\Group');
+        return $this->belongsTo('App\Group','gid');
     }
 
 }
