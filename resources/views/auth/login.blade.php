@@ -24,7 +24,7 @@
 
                                         {{ csrf_field() }}
 
-                                        <fieldset class="form-group{{ $errors->has('email') ? ' has-error' : '' }} position-relative has-icon-left mb-0">
+                                        <fieldset class="form-group{{ $errors->has('email') ? ' has-error' : '' }} position-relative has-icon-left mb-1">
                                             <input type="email" class="form-control form-control-lg input-lg" value="{{ old('email') }}"  id="user-name" placeholder="نام کاربری" required autofocus>
                                             <div class="form-control-position">
                                                 <i class="icon-head"></i>
