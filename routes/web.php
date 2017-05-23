@@ -13,9 +13,10 @@ use App\Group ;
 */
 
 Route::get('/', function () {
-    $usr = new App\User ;
-    $usr = $usr->find(1) ;
-    var_dump($usr->groups->toArray()) ;
+
+//    $Group = new App\Group;
+//    $Group = $Group->find(67) ;
+//    var_dump($Group->users->toArray()) ;
 });
 
 Auth::routes();
